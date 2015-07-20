@@ -8,7 +8,7 @@ from ConfigParser import ConfigParser
 
 msg = reduce(lambda x, y: x + " " + y, sys.argv[1:])
 c = ConfigParser()
-with open(config) as f:
+with open('twitter_cli.ini') as f:
     c.readfp(f)
 conf = dict(c.items('twitter'))
 auth = OAuthHandler(conf['consumer_key'], conf['consumer_secret'])
