@@ -1,15 +1,10 @@
 #!/usr/bin/python
-
 # coding: utf-8
 # author: oleg
-# ufo was here
-import sys
-import tweepy
 
-msg = ''
-sys.argv.remove(sys.argv[0])
-for i in sys.argv:
-    msg = msg + i + " "
+import sys, tweepy
+
+msg = reduce(lambda x, y: x + " " + y, sys.argv[1:])
 consumer_key = ""
 consumer_secret = ""
 access_key = ""
